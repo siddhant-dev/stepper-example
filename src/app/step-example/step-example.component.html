@@ -1,0 +1,17 @@
+<mat-stepper #stepper>
+  <mat-step *ngFor="let step of steps" [label]="step.label" [state]="step.state">
+    <ng-template matStepLabel>
+      {{ step.label }}</ng-template>
+    <ng-template #viewRef></ng-template>
+    <div>
+      <button (click)="goBack(stepper)" [disabled]="stepper.selectedIndex === 0">Back</button>
+      <button (click)="goForward(stepper)">Next</button>
+    </div>
+  </mat-step>
+  <ng-template matStepperIcon="phone" registerIcon="heroUserSolid">
+    <ng-icon name="heroUserSolid" size="10"></ng-icon>
+  </ng-template>
+  <ng-template matStepperIcon="chat">
+    <mat-icon>forum</mat-icon>
+  </ng-template>
+</mat-stepper>
