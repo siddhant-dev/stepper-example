@@ -1,0 +1,18 @@
+.buttons {
+  display: flex;
+  gap: 1rem;
+  padding: 0 1rem;
+  align-items: center;
+  justify-content: space-between;
+  button {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    border-radius: 0.625rem;
+    border: none;
+    background-color: #1f346d;
+    color: white;
+    &:disabled {
+      background-color: gray;
+    }
+  }
+}
